@@ -8,6 +8,7 @@ SUFFIX = '.hoi4profile'
 def main():
   import sys
   if len(sys.argv) < 2:
+    print_usage()
     fatal("Must provide action, check help")
   
   action = sys.argv[1]
@@ -16,7 +17,10 @@ def main():
     args = sys.argv[2:]
   (root, saves_dir) = get_paths()
 
-  if action == "save":
+  if action == "help":
+    print_usage()
+    exit(1)
+  elif action == "save":
     save(root, saves_dir, args)
   elif action == "list":
     list_profiles(root, saves_dir, args)
@@ -115,6 +119,18 @@ def get_paths():
     os.mkdir(saves)
 
   return (root, saves)
+
+def print_usage():
+  options = {
+    'list': ('list\t', 'List the current profiles'),
+    'save': ('save NAME', 'save the current profile with given name'),
+    'activate': ('activate NAME', 'activate a sepecific profile, overwrites the current mod selection in HoI')
+  }
+
+  print('USAGE:')
+  for option in options:
+    (usage, descp) = options[option]
+    print(f'\t{usage}\t\t| {descp}')
 
 def fatal(message):
   print(message)
