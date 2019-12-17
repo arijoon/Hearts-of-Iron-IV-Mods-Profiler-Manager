@@ -19,7 +19,7 @@ def main():
 
   if action == "help":
     print_usage()
-    exit(1)
+    exit(0)
   elif action == "save":
     save(root, saves_dir, args)
   elif action == "list":
