@@ -10,3 +10,5 @@ USAGE:
         save NAME               | save the current profile with given name
         activate NAME           | activate a sepecific profile, overwrites the current mod selection in HoI
 ```
+
+**Requires Python 3**
