@@ -108,7 +108,7 @@ def get_paths():
   root = os.path.expandvars(os.environ['HOI_ROOT'])
   saves = os.path.expandvars(os.environ['HOI_PROFILER_SAVES_ROOT'])
 
-  if not saves:
+  if not root:
     fatal("You must set HOI_ROOT environment variable for the documents folder where mods are")
     
   if not saves:
