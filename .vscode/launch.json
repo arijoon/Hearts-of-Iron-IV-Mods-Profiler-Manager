@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      // "args": ["save", "tester2"],
+      "args": ["activate", "tester"],
+      // "args": ["list"],
+      "env": {
+        "HOI_ROOT": "%USERPROFILE%\\Documents\\Paradox Interactive\\Hearts of Iron IV",
+        "HOI_PROFILER_SAVES_ROOT": "%USERPROFILE%\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod_profiles"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}
